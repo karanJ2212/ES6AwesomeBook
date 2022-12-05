@@ -2,7 +2,7 @@ export const registeredBooks = document.querySelector(".book-list");
 export const author = document.querySelector(".author");
 export const Title = document.querySelector(".title");
 
-export function addBooks(Books) {
+export const addBooks = (Books) => {
   registeredBooks.innerHTML = "";
   for (let i = 0; i < Books.length; i++) {
     registeredBooks.innerHTML += `
@@ -16,9 +16,9 @@ export function addBooks(Books) {
     author.value = "";
     Title.focus();
   }
-}
-export function deleteBook(el) {
+};
+export const deleteBook = (el) => {
   if (el.classList.contains("remove")) {
     el.parentElement.remove();
   }
-}
+};
