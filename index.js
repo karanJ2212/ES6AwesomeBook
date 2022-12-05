@@ -12,13 +12,6 @@ const ListMenu = document.querySelector(".list");
 const AddMenu = document.querySelector(".add");
 const ContactMenu = document.querySelector(".contactmenu");
 const addButton = document.querySelector(".addbook");
-// const time = date.toLocaleTimeString("en-US", {
-//   hour: "numeric",
-//   minute: "numeric",
-//   hour12: true,
-// });
-
-// showDateAndTime.innerHTML = `${date.toDateString()}, ${time}`;
 
 const setTime = () => {
   showDateAndTime.innerHTML = DateTime.now().toLocaleString(
