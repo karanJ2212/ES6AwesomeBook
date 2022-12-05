@@ -3,21 +3,22 @@
 import { addBooks, deleteBook } from "./Module/ui.js";
 
 import { Title, author, registeredBooks } from "./Module/ui.js";
-import { DateTime } from "./Module/luxon.js";
+import { setTime } from "./Module/setTime.js";
+// import { DateTime } from "./Module/luxon.js";
 // const Title = document.querySelector(".title");
 /* eslint-disable no-unused-vars */
 // const date = new Date();
-const showDateAndTime = document.querySelector(".date-and-time");
+// const showDateAndTime = document.querySelector(".date-and-time");
 const ListMenu = document.querySelector(".list");
 const AddMenu = document.querySelector(".add");
 const ContactMenu = document.querySelector(".contactmenu");
 const addButton = document.querySelector(".addbook");
 
-const setTime = () => {
-  showDateAndTime.innerHTML = DateTime.now().toLocaleString(
-    DateTime.DATETIME_MED_WITH_SECONDS
-  );
-};
+// const setTime = () => {
+//   showDateAndTime.innerHTML = DateTime.now().toLocaleString(
+//     DateTime.DATETIME_MED_WITH_SECONDS
+//   );
+// };
 setInterval(setTime, 1000);
 
 class Book {
@@ -62,15 +63,10 @@ addButton.addEventListener("click", (e) => {
 //remove
 
 document.querySelector(".booksdata").addEventListener("click", (e) => {
-  if (!localStorage.getItem("Books")) {
-    document.querySelector(".emptymsg").style.display = "block";
-    registeredBooks.style.border = "none";
-  } else {
-    Books.splice(e.target.id, 1);
+  Books.splice(e.target.id, 1);
 
-    localStorage.setItem("Books", JSON.stringify(Books));
-    deleteBook(e.target);
-  }
+  localStorage.setItem("Books", JSON.stringify(Books));
+  deleteBook(e.target);
 });
 
 ListMenu.addEventListener("click", () => {
