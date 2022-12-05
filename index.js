@@ -62,15 +62,10 @@ addButton.addEventListener("click", (e) => {
 //remove
 
 document.querySelector(".booksdata").addEventListener("click", (e) => {
-  if (!localStorage.getItem("Books")) {
-    document.querySelector(".emptymsg").style.display = "block";
-    registeredBooks.style.border = "none";
-  } else {
-    Books.splice(e.target.id, 1);
+  Books.splice(e.target.id, 1);
 
-    localStorage.setItem("Books", JSON.stringify(Books));
-    deleteBook(e.target);
-  }
+  localStorage.setItem("Books", JSON.stringify(Books));
+  deleteBook(e.target);
 });
 
 ListMenu.addEventListener("click", () => {
