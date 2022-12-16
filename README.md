@@ -27,7 +27,7 @@
 
 # 📖 Awesome Books <a name="about-project"></a>
 
-This project is made with vanilla javascript. This adds and store list of books onto page
+This is vanilla javascript book keeping application. Its has functionality of add and remove and uses local storage. Its made as per design requirements of microverse and made using HTML,CSS and Javascript  
 
 ## 🛠 Built With <a name="built-with"></a>
 
